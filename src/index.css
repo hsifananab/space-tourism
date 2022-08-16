@@ -115,3 +115,11 @@ h5 {
 
   color: var(--accent);
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+}

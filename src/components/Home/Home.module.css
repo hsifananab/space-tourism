@@ -27,7 +27,11 @@
 
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+
 }
+
+.Home__explore:hover {}
 
 .Home__explore h4 {
   color: #0B0D17;
@@ -64,6 +68,7 @@
   .Home__explore {
     width: 242px;
     height: 242px;
+
   }
 }
 
