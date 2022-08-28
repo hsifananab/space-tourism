@@ -1,14 +1,17 @@
 import Menu from './Menu/Menu';
 import { ReactComponent as Logo } from '../../assets/img/shared/logo.svg';
 import styles from './Header.module.css';
+import { NavLink } from 'react-router-dom';
+import { getScreens } from '../../screens';
 
 const Header = () => {
+  const screens = getScreens();
   return (
     <div className={styles.Header}>
-      <div className="logo">
+      <NavLink to="/home" className="logo">
         <Logo />
-      </div>
-      <Menu />
+      </NavLink>
+      <Menu base={screens} numbers={true} />
     </div>
   );
 };

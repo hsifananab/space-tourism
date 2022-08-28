@@ -1,4 +1,11 @@
 .Home {
+  background: url('../../assets/img/home/background-home-desktop.jpg') center center/cover;
+}
+
+.Home__container {
+  margin: 0 auto;
+
+  max-width: 1200px;
   width: 100%;
   height: 100vh;
 
@@ -22,16 +29,27 @@
 }
 
 .Home__explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
   width: 274px;
   height: 274px;
 
   border: none;
   border-radius: 50%;
   cursor: pointer;
-
+  transition: .2s all ease-out;
+  text-decoration: none;
 }
 
-.Home__explore:hover {}
+/* .Home__explore a {
+  text-decoration: none;
+} */
+
+.Home__explore:hover {
+  box-shadow: 0 0 0 88px rgba(255, 255, 255, .1);
+}
 
 .Home__explore h4 {
   color: #0B0D17;
@@ -39,6 +57,11 @@
 
 @media (max-width: 768px) {
   .Home {
+    background: url('../../assets/img/home/background-home-tablet.jpg') center center/cover;
+
+  }
+
+  .Home__container {
     flex-direction: column;
     align-items: center;
 
@@ -68,13 +91,22 @@
   .Home__explore {
     width: 242px;
     height: 242px;
+  }
 
+  .Home__explore:hover {
+    box-shadow: 0 0 0 78px rgba(255, 255, 255, .1);
   }
 }
 
 @media (max-width: 425px) {
   .Home {
+    background: url('../../assets/img/home/background-home-mobile.jpg') center center/cover;
+
+  }
+
+  .Home__container {
     padding: 112px 24px 48px;
+
   }
 
   .Home__item {
@@ -99,6 +131,10 @@
   .Home__explore {
     width: 150px;
     height: 150px;
+  }
+
+  .Home__explore:hover {
+    box-shadow: 0 0 0 48px rgba(255, 255, 255, .1);
   }
 
   .Home__explore h4 {

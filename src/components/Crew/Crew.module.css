@@ -1,0 +1,54 @@
+.Crew {
+  background: url('../../assets/img/crew/background-crew-desktop.jpg') center center/cover;
+}
+
+.Crew__container {
+  margin: 0 auto;
+
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+
+  padding: 131px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Crew__inner {
+  display: flex;
+}
+
+.Crew__item {
+  width: 100%;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .Crew {
+    background: url('../../assets/img/crew/background-crew-tablet.jpg') center center/cover;
+
+  }
+
+  .Crew__container {
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 202px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 425px) {
+  .Crew {
+    background: url('../../assets/img/crew/background-crew-mobile.jpg') center center/cover;
+
+  }
+
+  .Crew__container {
+    padding: 112px 24px 48px;
+
+  }
+}

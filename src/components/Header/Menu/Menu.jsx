@@ -1,16 +1,37 @@
-import getScreens from '../../../screens';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Menu.module.css';
 
-const Menu = () => {
-  const screens = getScreens();
+const Menu = props => {
   return (
-    <ul className={styles.Menu}>
-      {screens.map(screen => (
-        <li key={screen.id} className={styles.Menu__item}>
-          <span className={styles.Menu__item_bold}>0{screen.id}</span>{' '}
-          {screen.label}
-        </li>
+    <ul className={`${styles.Menu} + ${props.minimal && styles.Menu_minimal}`}>
+      {props.base.map(item => (
+        <NavLink
+          style={({ isActive }) =>
+            isActive
+              ? props.minimal
+                ? {
+                    borderBottom: '3px solid var(--primary)',
+                    paddingBottom: '12px',
+                  }
+                : {
+                    borderBottom: '3px solid var(--primary)',
+                    paddingBottom: '35px',
+                  }
+              : undefined
+          }
+          className={styles.Menu__item}
+          key={item.id}
+          to={item.path}
+          onClick={e => {
+            props.onClickHandler(e.target.textContent);
+          }}
+        >
+          {props.numbers && (
+            <span className={styles.Menu__item_bold}>0{item.id}</span>
+          )}
+          {item.label}
+        </NavLink>
       ))}
     </ul>
   );

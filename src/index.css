@@ -116,10 +116,39 @@ h5 {
   color: var(--accent);
 }
 
+.container {}
+
 .logo {
   display: flex;
   align-items: center;
 
   cursor: pointer;
 
+}
+
+.section-title {
+  padding: 75px 0 64px;
+  align-self: flex-start;
+  color: var(--primary);
+}
+
+.section-title span {
+  font-weight: 700;
+  opacity: .25;
+  margin-right: 28px;
+}
+
+@media (max-width: 768px) {
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .section-title {
+    padding: 40px 0 60px;
+  }
+
+  .section-title span {
+    margin-right: 19px;
+  }
 }

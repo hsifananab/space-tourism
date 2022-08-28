@@ -1,0 +1,16 @@
+.TabItem {
+  width: 80px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(155, 155, 155, .25);
+
+}
+
+.TabItem_active {
+  color: var(--bg);
+  background-color: var(--primary);
+  border: none;
+}

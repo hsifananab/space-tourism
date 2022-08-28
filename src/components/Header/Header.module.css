@@ -11,3 +11,13 @@
   /* width: 100%; */
   /* outline: 1px solid red; */
 }
+
+
+
+@media (max-width: 768px) {
+  .Header {
+    top: 0;
+    left: 39px;
+    gap: 231px;
+  }
+}
