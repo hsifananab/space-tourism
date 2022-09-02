@@ -1,13 +1,16 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Destinations from './components/Destinations/Destinations';
-
-import styles from './App.module.css';
 import Crew from './components/Crew/Crew';
 import Technology from './components/Technology/Technology';
+
+import styles from './App.module.css';
 
 const App = () => {
   return (
